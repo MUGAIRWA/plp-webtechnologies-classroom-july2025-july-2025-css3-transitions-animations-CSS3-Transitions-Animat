@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suzana Café ☕</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="coffee-cup">☕</div>
+    <p>Brewing your experience...</p>
+  </div>
+
+  <!-- Main Content -->
+  <div id="page-content" class="hidden">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">Suzana Café</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#special">Special</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+      <h1 class="fade-in">Welcome to Suzana Café</h1>
+      <p class="slide-in">Where every cup is brewed with love ❤️</p>
+      <button class="btn" onclick="toggleModal(true)">Today's Special</button>
+      <img src="https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg" alt="Coffee Cup" class="hero-img">
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <img src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Cafe Interior">
+        <p>At Suzana Café, we believe coffee is more than just a drink — it's a ritual. 
+           Our beans are locally sourced, freshly ground, and brewed to perfection. 
+           We serve fresh pastries, healthy snacks, and seasonal specialties that keep our customers coming back.  
+           Whether you're here to work, catch up with friends, or simply relax — we've got a cozy corner waiting for you.</p>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <h2>Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>☕ Cappuccino</h3>
+              <span>KES 250</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Rich espresso topped with frothy milk</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>🥐 Croissant</h3>
+              <span>KES 150</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Buttery & flaky, baked fresh daily</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>🍩 Donut</h3>
+              <span>KES 120</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Classic glazed or chocolate options</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>🍵 Matcha Latte</h3>
+              <span>KES 300</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Wholesome & creamy green tea goodness</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>🥗 Fresh Salad</h3>
+              <span>KES 400</span>
+            </div>
+            <div class="flip-card-back">
+              <p>Seasonal vegetables, house dressing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Special Section -->
+    <section id="special" class="cta">
+      <h2>Discount Box</h2>
+      <div id="special-box" class="box">
+        <p class="discount-text">🎉 Click to See Discount 🎉</p>
+      </div>
+      <button id="animate-btn" class="btn">Click to Reveal Offer</button>
+
+      <!-- Flip Cards -->
+      <div class="flip-cards-container">
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Visit Us</h2>
+      <div class="contact-details">
+        <p>📍 123 Coffee Street, Nairobi</p>
+        <p>📞 +254 712 345 678</p>
+        <p>⏰ Open Daily: 7 AM – 9 PM</p>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="offer-modal" class="modal">
+      <div class="modal-content">
+        <h3>🎉 Today's Special 🎉</h3>
+        <p>Buy 1 Latte & Get a Donut 50% Off!</p>
+        <button class="btn close-btn" onclick="toggleModal(false)">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
